@@ -6,18 +6,16 @@
    <script type="text/javascript" src="js/scorrimento_sequenziale.js"></script>
 </head>
 <body>
-  <input type="image" src="img/sinistra.jpeg" id="prev_arrow" value="1" onclick="goPrevious()">
+  <input type="image" src="img/sinistra.jpeg" id="prev_arrow" value="1" onclick="goPrevious()" visibility="hidden">
   <img src="img/uno.png" id="current_img">
   <input type="image" src="img/destra.jpeg" id="next_arrow" value="1" onclick="goNext()">
   <p id="description">Descrizione</p>
-<!--
+
   <p>
     Scegliere se si vuole scorrimento infinito (loop) oppure se si vuole scorrere solo fino a inizio/fine.
   </p>
-  <input type="radio" id="loop" name="mode" value="loop">
-  <label for="loop">Loop</label><br>
-  <input type="radio" id="single" name="mode" value="single">
-  <label for="single">Single</label><br>
--->
+  <input type="radio" id="loop" name="loop_mode" value="LOOP" checked="checked" onclick="showNextPrevArrows()">Loop<br />
+  <input type="radio" id="single" name="loop_mode" value="SINGLE" onclick="hideNextPrevArrows()">Single<br />
+
 </body>
 </html>
